@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>한동민의 iPhone</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="wrap">
+<div class="phone">
+<div class="inner" >
+<div class="island">
+</div>
+<header class="status">
+<span id="statusTime">SKT</span>
+<span class="signals">
+<svg viewBox="0 0 18 14" aria-label="신호">
+<rect x="0" y="9" width="3" height="5" rx="1"/>
+<rect x="5" y="6" width="3" height="8" rx="1"/>
+<rect x="10" y="3" width="3" height="11" rx="1"/>
+<rect x="15" y="0" width="3" height="14" rx="1"/>
+</svg>
+<svg viewBox="0 0 20 15" aria-label="와이파이">
+<path d="M1 4Q10 -3 19 4L17 6Q10 1 3 6ZM5 8Q10 4 15 8L13 10Q10 8 7 10ZM8 12Q10 10 12 12L10 14Z"/>
+</svg>
+<span class="battery">65</span>
+</span>
+</header>
+<section id="lock" class="screen lock">
+<div class="locktop">
+<div class="lockglyph">♙</div>
+<div class="date" id="lockDate">
+</div>
+<div class="clock" id="lockTime">
+</div>
+</div>
+<div class="notifications">
+<div class="kakao-notice glass">
+<div class="mini-kakao">
+<img src="assets/images/ce5745575776f8.jpg" alt="카카오톡">
+</div>
+<div class="notice-body">
+<strong>좋아해</strong>
+<div>너 어디임 나 인문관인데</div>
+</div>
+<small>5분 전</small>
+</div>
+<div class="kakao-notice glass">
+<div class="mini-kakao">
+<img src="assets/images/ce5745575776f8.jpg" alt="카카오톡">
+</div>
+<div class="notice-body">
+<strong>펌킨박</strong>
+<div>너 동민이랑 수업 쨌어?</div>
+</div>
+<small>10분 전</small>
+</div>
+<div class="player glass">
+<div class="track">
+<img class="cover" src="assets/images/1ab06139a80e88.jpg" alt="Oasis Champagne Supernova 앨범 커버">
+<div class="song">
+<strong>Champagne Supernova</strong>
+<small>Oasis</small>
+</div>
+</div>
+<div class="progress">
+<span id="elapsed">0:00</span>
+<div class="rail">
+<i id="trackProgress">
+</i>
+</div>
+<span id="remaining">−7:27</span>
+</div>
+<div class="controls">
+<button aria-label="처음으로" id="restart">
+<svg viewBox="0 0 32 32" aria-hidden="true">
+<path d="M15 5v22L1 16zm15 0v22L16 16z" fill="currentColor"/>
+</svg>
+</button>
+<button class="play" id="play" aria-label="재생 UI 일시정지">
+<svg viewBox="0 0 32 32" aria-hidden="true">
+<rect x="7" y="4" width="7" height="24" rx="1.5" fill="currentColor"/>
+<rect x="19" y="4" width="7" height="24" rx="1.5" fill="currentColor"/>
+</svg>
+</button>
+<button aria-label="다음 곡" id="next">
+<svg viewBox="0 0 32 32" aria-hidden="true">
+<path d="M2 5v22l14-11zm15 0v22l14-11z" fill="currentColor"/>
+</svg>
+</button>
+<span class="airplay">
+<svg viewBox="0 0 32 32" aria-hidden="true">
+<circle cx="16" cy="13" r="11" fill="none" stroke="currentColor" stroke-width="1.7"/>
+<circle cx="16" cy="13" r="7" fill="none" stroke="currentColor" stroke-width="1.7"/>
+<path d="M16 12L5 29h22z" fill="currentColor" stroke="#ddd" stroke-width="1"/>
+</svg>
+</span>
+</div>
+</div>
+</div>
+<div class="swipehint">위로 쓸어올려 잠금 해제</div>
+<div class="locktools">
+<button class="tool" aria-label="손전등" onclick="this.style.background=this.style.background?'':'#ffffff70'">
+<svg viewBox="0 0 32 32" aria-hidden="true">
+<path d="M9 3h14v4H9zM10 9h12l-3.5 7v12h-5V16z" fill="currentColor"/>
+<rect x="14.7" y="18" width="2.6" height="5" rx="1.3" fill="#555"/>
+</svg>
+</button>
+<button class="tool" aria-label="카메라" onclick="showPin()">
+<svg viewBox="0 0 32 32" aria-hidden="true">
+<path d="M5 10h5l2-4h8l2 4h5a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V12a2 2 0 0 1 2-2" fill="currentColor"/>
+<circle cx="16" cy="18" r="6" fill="#555"/>
+<circle cx="16" cy="18" r="4.5" fill="currentColor"/>
+<circle cx="25" cy="13" r="1" fill="#555"/>
+</svg>
+</button>
+</div>
+</section>
+<section id="home" class="screen home" hidden>
+<div class="widgets">
+<div class="widget weather">
+<div class="city">서울특별시 강서구</div>
+<div class="temp">17.7°</div>
+<div class="condition">맑음</div>
+<small>10.25. 10:50 기준</small>
+</div>
+<div class="widget calendar-widget">
+<div class="weekday" id="widgetWeek">
+</div>
+<div class="day" id="widgetDay">
+</div>
+<div class="event">작곡의 이해 과제 마감</div>
+<div class="event second">아쿠아리움</div>
+</div>
+</div>
+<div id="apps" class="apps">
+</div>
+<div class="page-dot">●</div>
+<nav id="dock" class="dock" aria-label="하단 앱">
+</nav>
+</section>
+<section id="pin" class="screen pin" hidden>
+<div class="pin-title">암호 입력</div>
+<div class="pin-dots">
+<i class="pin-dot">
+</i>
+<i class="pin-dot">
+</i>
+<i class="pin-dot">
+</i>
+<i class="pin-dot">
+</i>
+</div>
+<div class="keypad" id="keypad">
+</div>
+<div class="pin-bottom">
+<button onclick="cancelPin()">취소</button>
+<button onclick="removeDigit()">지우기</button>
+</div>
+<div id="pinError" class="pin-error" aria-live="polite">
+</div>
+</section>
+<section id="appPanel" class="screen apppanel" hidden>
+<button class="back" onclick="closeApp()">‹ 홈 화면</button>
+<h1 id="appTitle">
+</h1>
+<div class="empty">아직 등록된 내용이 없습니다.</div>
+</section>
+<button class="gesture" id="gesture" aria-label="잠금 해제 또는 홈으로">
+</button>
+<div class="homebar">
+</div>
+</div>
+</div>
+<button class="outside" onclick="lockPhone()">다시 잠그기</button>
+</main>
+<script src="js/reset-on-load.js"></script>
+<script src="js/01-phone-core.js">
+</script>
+<script src="js/02-apps-base.js">
+</script>
+<script src="js/03-communications.js">
+</script>
+<script src="js/04-social-ui.js">
+</script>
+<script src="js/05-navigation-fixes.js">
+</script>
+<script src="js/06-communications-fixes.js">
+</script>
+<script src="js/07-chat-rendering.js">
+</script>
+<script src="js/08-history-data.js">
+</script>
+<script src="js/09-chat-cleanup.js">
+</script>
+<script src="js/10-notification-data.js">
+</script>
+<script src="js/11-social-fixes.js">
+</script>
+<script src="js/chat-engine.js">
+</script>
+<script src="js/app-final.js">
+</script>
+<script src="js/story-update.js"></script>
+</body>
+</html>
